@@ -1,0 +1,27 @@
+{
+  "name": "dish-app",
+  "version": "0.0.0",
+  "description": "A simple dish application made with node and postgres as database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayoishola20/dishApp.git"
+  },
+  "keywords": [
+    "dishapp",
+    "node",
+    "postgres",
+    "dust",
+    "engine",
+    "express"
+  ],
+  "author": "bayoishola20 (inspired by Brad Traversy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bayoishola20/dishApp/issues"
+  },
+  "homepage": "https://github.com/bayoishola20/dishApp#readme"
+}

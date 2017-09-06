@@ -13,6 +13,7 @@ NodeJS + PostgreSQL
 * Node
 * PostgreSQL
 * Express
+* Dust Template engine for Express
 
 
 
