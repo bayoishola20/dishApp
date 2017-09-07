@@ -9,7 +9,9 @@ const pg = require('pg');
 const app = express();
 
 //Database connection
-const database = "postgres://postgres: @localhost/dishApp";
+const db = "postgres://postgres: @localhost/dishApp";
+
+
 
 //Set dust engine to dust files
 app.engine('dust', cons.dust);
