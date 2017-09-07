@@ -18,8 +18,18 @@
     "engine",
     "express"
   ],
-  "author": "bayoishola20 (inspired by Brad Traversy)",
+  "author": "bayoishola20",
   "license": "MIT",
+  "dependencies": {
+    "nodemon": "*",
+    "body-parser": "^1.15.0",
+    "consolidate": "*",
+    "dust": "*",
+    "dustjs-helpers": "*",
+    "dustjs-linkedin": "",
+    "express": "*",
+    "pg": "*"
+  },
   "bugs": {
     "url": "https://github.com/bayoishola20/dishApp/issues"
   },

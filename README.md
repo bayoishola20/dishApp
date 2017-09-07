@@ -1,10 +1,10 @@
-# dishApp
-NodeJS + PostgreSQL
+# node-pg Dish Application
+NodeJS + PostgreSQL → Single Page Application
 
 ## To use:
-* Clone the repo: `https://github.com/bayoishola20/dishApp.git`
+Clone the repo: `https://github.com/bayoishola20/dishApp.git`
 
-* `npm install`
+`npm install`
 
 
 
