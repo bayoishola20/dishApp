@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dish application</title>
-        <meta name="description" content="An SPA Dish application">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="bayoishola20">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    </head>
-    <body>
-        {+body /}
-        THIS IS INDEX
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
-</html>
+{>"layout" /}
+
+{<body}
+    {#dishes}
+        <div class="well">
+            <h4>
+                {name}
+                <button class="btn btn-default pull-right">
+                    Show
+                </button>
+            </h4>
+        </div>
+    {/dishes}
+{/body}

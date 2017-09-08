@@ -21,14 +21,14 @@
   "author": "bayoishola20",
   "license": "MIT",
   "dependencies": {
-    "nodemon": "*",
     "body-parser": "^1.15.0",
     "consolidate": "*",
     "dust": "*",
     "dustjs-helpers": "*",
     "dustjs-linkedin": "",
     "express": "*",
-    "pg": "*"
+    "nodemon": "*",
+    "pg": "^6.4.2"
   },
   "bugs": {
     "url": "https://github.com/bayoishola20/dishApp/issues"

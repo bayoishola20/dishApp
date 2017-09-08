@@ -5,11 +5,12 @@ const cons = require('consolidate');
 const dust = require('dustjs-helpers');
 const pg = require('pg');
 
+
 //app init
 const app = express();
 
 //Database connection
-const db = "postgres://postgres: @localhost/dishApp";
+const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
 
 
 
@@ -28,9 +29,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Home page route
-app.get('/', (req, res) => {
-    res.render('index');
-})
+app.get('/', function(req, res) {
+   pg.connect(db, function(err, client, done){
+    if(err) {
+        return console.error('error fetching client from pool', err);
+    }
+    client.query('SELECT * FROM dishes', function(err, result){
+        if(err) {
+            return console.error('error running query', err);;
+        }
+        res.render('index', { dishes: result.rows })
+        done();
+    });
+   });
+});
 
 //Server
 app.set('port', (process.env.PORT || 3333));
