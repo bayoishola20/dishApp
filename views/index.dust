@@ -6,7 +6,7 @@
             <h4>
                 {name}
                 <button class="btn btn-default pull-right" data-toggle="collapse" href="#dishes_{id}" aria-expanded="false" aria-controls="dishes_{id}e">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
                 </button>
             </h4>
             <div class="collapse" id="dishes_{id}">
