@@ -14,9 +14,15 @@
                 <br>
                 <p><strong>Ingredients: </strong>{ingredients}</p>
                 <p><strong>How-To: </strong>{directions}</p>
-                <p><strong>Duration: </strong>{time}</p>
+                <p class="pull-right"><strong>Duration: </strong>{time}</p>
                 <br>
                 <hr>
+                <button class="btn btn-default edit-dish">
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                </button> &nbsp;
+                <button class="btn btn-danger delete-dish">
+                    <i class="fa fa-remove" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     {/dishes}
