@@ -5,10 +5,19 @@
         <div class="well">
             <h4>
                 {name}
-                <button class="btn btn-default pull-right">
-                    Show
+                <button class="btn btn-default pull-right" data-toggle="collapse" href="#dishes_{id}" aria-expanded="false" aria-controls="dishes_{id}e">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </button>
             </h4>
+            <div class="collapse" id="dishes_{id}">
+                <br>
+                <br>
+                <p><strong>Ingredients: </strong>{ingredients}</p>
+                <p><strong>How-To: </strong>{directions}</p>
+                <p><strong>Duration: </strong>{time}</p>
+                <br>
+                <hr>
+            </div>
         </div>
     {/dishes}
 {/body}
