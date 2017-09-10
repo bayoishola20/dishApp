@@ -1,6 +1,12 @@
 {>"layout" /}
 
 {<body}
+    <button class="btn btn-success btn-block" data-toggle="modal" data-target="#formModal">
+        Add Dish
+    </button>
+
+    <br>
+
     {#dishes}
         <div class="well">
             <h4>
@@ -10,6 +16,7 @@
                 </button>
             </h4>
             <div class="collapse" id="dishes_{id}">
+                <hr>
                 <br>
                 <br>
                 <p><strong>Ingredients: </strong>{ingredients}</p>
