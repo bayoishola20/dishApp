@@ -70,6 +70,19 @@ app.delete('/delete/:id', function(req, res){
    });
 });
 
+// Edit dish
+app.post('/edit', function(req, res){
+    pg.connect(db, function(err, client, done){
+    if(err) {
+        return console.error('error fetching client from pool', err);
+    }
+    client.query('UPDATE dishes SET name = $1, ingredients = $2, directions = $3, time = $4 WHERE id = $5', [req.body.name, req.body.ingredients, req.body.directions, req.body.time, req.body.id]);
+
+    done();
+    res.redirect('/');
+   });
+});
+
 //Server
 app.set('port', (process.env.PORT || 3333));
 app.listen(app.get('port'), function(){

@@ -5,6 +5,9 @@ NodeJS + PostgreSQL → Single Page Application
 Clone the repo: `git clone https://github.com/bayoishola20/dishApp.git`
 
 `$ (sudo) npm install`
+`$ nodemon`
+
+Server should start at port 3333
 
 
 
