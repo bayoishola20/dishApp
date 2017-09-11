@@ -2,9 +2,9 @@
 NodeJS + PostgreSQL → Single Page Application
 
 ## To use:
-Clone the repo: `https://github.com/bayoishola20/dishApp.git`
+Clone the repo: `git clone https://github.com/bayoishola20/dishApp.git`
 
-`npm install`
+`$ (sudo) npm install`
 
 
 

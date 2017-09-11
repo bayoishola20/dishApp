@@ -2,7 +2,8 @@
 
 {<body}
     <button class="btn btn-success btn-block" data-toggle="modal" data-target="#formModal">
-        Add Dish
+        <i class="fa fa-plus-square" aria-hidden="true"></i>
+        &nbsp; Add Dish
     </button>
 
     <br>
@@ -12,7 +13,7 @@
             <h4>
                 {name}
                 <button class="btn btn-default pull-right" data-toggle="collapse" href="#dishes_{id}" aria-expanded="false" aria-controls="dishes_{id}e">
-                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <i class="fa fa-info-circle" aria-hidden="true" title="Show more"></i>
                 </button>
             </h4>
             <div class="collapse" id="dishes_{id}">
@@ -33,4 +34,51 @@
             </div>
         </div>
     {/dishes}
+
+    <!-- Formal Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" action="/add">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add dish</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">
+                            Dish Name
+                        </label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ingredients">
+                            Ingredients
+                        </label>
+                        <textarea class="form-control" name="ingredients"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="directions">
+                            How-To
+                        </label>
+                        <textarea class="form-control" name="directions"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">
+                            Duration
+                        </label>
+                        <input type="text" class="form-control" name="time">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" value="Done">
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
 {/body}

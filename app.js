@@ -44,6 +44,19 @@ app.get('/', function(req, res) {
    });
 });
 
+//Add post
+app.post('/add', function(req, res){
+   pg.connect(db, function(err, client, done){
+    if(err) {
+        return console.error('error fetching client from pool', err);
+    }
+    client.query('INSERT INTO dishes(name, ingredients, directions, time) VALUES($1, $2, $3, $4)', [req.body.name, req.body.ingredients, req.body.directions, req.body.time]);
+
+    done();
+    res.redirect('/');
+   }); 
+});
+
 //Server
 app.set('port', (process.env.PORT || 3333));
 app.listen(app.get('port'), function(){
