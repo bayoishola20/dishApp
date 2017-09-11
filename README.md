@@ -19,6 +19,8 @@ Server should start at port 3333
 * Express
 * Dust Template engine for Express
 
+![Preview](https://github.com/bayoishola20/dishApp/blob/master/public/img/dishApp-bayoishola20.png "Preview")
+
 
 
 [bayoishola20](github.bayoishola20.io)
