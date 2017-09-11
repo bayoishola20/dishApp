@@ -57,6 +57,19 @@ app.post('/add', function(req, res){
    }); 
 });
 
+// Delete dish
+app.delete('/delete/:id', function(req, res){
+    pg.connect(db, function(err, client, done){
+    if(err) {
+        return console.error('error fetching client from pool', err);
+    }
+    client.query('DELETE FROM dishes WHERE id = $1', [req.params.id]);
+
+    done();
+    res.sendStatus(200);
+   });
+});
+
 //Server
 app.set('port', (process.env.PORT || 3333));
 app.listen(app.get('port'), function(){
