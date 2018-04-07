@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cons = require('consolidate');
 const dust = require('dustjs-helpers');
-const pg = require('pg');
+const { Client } = require('pg');
 
 
 //app init
@@ -11,8 +11,12 @@ const app = express();
 
 //Database connection
 // const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
-const db = "process.env.DATABASE_URL?ssl=true"
+// const db = "process.env.DATABASE_URL?ssl=true"
 
+const db = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
+});
 
 
 //Set dust engine to dust files
