@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cons = require('consolidate');
 const dust = require('dustjs-helpers');
-const { Client } = require('pg');
+const pg = require('pg');
 
 
 //app init
@@ -11,12 +11,8 @@ const app = express();
 
 //Database connection
 // const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
-// const db = "process.env.DATABASE_URL?ssl=true"
+const db = "process.env.DATABASE_URL?ssl=true"
 
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
-});
 
 
 //Set dust engine to dust files
@@ -35,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Home page route
 app.get('/', function(req, res) {
-    client.connect(db, function(err, client, done){
+   pg.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
@@ -51,7 +47,7 @@ app.get('/', function(req, res) {
 
 //Add post
 app.post('/add', function(req, res){
-    client.connect(db, function(err, client, done){
+   pg.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
@@ -64,7 +60,7 @@ app.post('/add', function(req, res){
 
 // Delete dish
 app.delete('/delete/:id', function(req, res){
-    client.connect(db, function(err, client, done){
+    pg.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
@@ -77,7 +73,7 @@ app.delete('/delete/:id', function(req, res){
 
 // Edit dish
 app.post('/edit', function(req, res){
-    client.connect(db, function(err, client, done){
+    pg.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
