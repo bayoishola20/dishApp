@@ -25,10 +25,10 @@
     "consolidate": "*",
     "dust": "*",
     "dustjs-helpers": "*",
-    "dustjs-linkedin": "",
+    "dustjs-linkedin": "*",
     "express": "*",
     "nodemon": "*",
-    "pg": "^6.4.2"
+    "pg": "^6.3.1"
   },
   "bugs": {
     "url": "https://github.com/bayoishola20/dishApp/issues"

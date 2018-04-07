@@ -10,7 +10,8 @@ const pg = require('pg');
 const app = express();
 
 //Database connection
-const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
+// const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
+const db = "process.env.HEROKU_POSTGRESQL_DBNAME_URL"
 
 
 
