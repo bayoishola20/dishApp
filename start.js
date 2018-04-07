@@ -13,7 +13,7 @@ const app = express();
 // const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
 // const db = "process.env.DATABASE_URL?ssl=true"
 
-const db = new Client({
+const client = new Client({
     connectionString: process.env.DATABASE_URL,
     ssl: true,
 });
@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Home page route
 app.get('/', function(req, res) {
-   pg.connect(db, function(err, client, done){
+    client.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
@@ -51,7 +51,7 @@ app.get('/', function(req, res) {
 
 //Add post
 app.post('/add', function(req, res){
-   pg.connect(db, function(err, client, done){
+    client.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
@@ -64,7 +64,7 @@ app.post('/add', function(req, res){
 
 // Delete dish
 app.delete('/delete/:id', function(req, res){
-    pg.connect(db, function(err, client, done){
+    client.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
@@ -77,7 +77,7 @@ app.delete('/delete/:id', function(req, res){
 
 // Edit dish
 app.post('/edit', function(req, res){
-    pg.connect(db, function(err, client, done){
+    client.connect(db, function(err, client, done){
     if(err) {
         return console.error('error fetching client from pool', err);
     }
