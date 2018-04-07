@@ -2,7 +2,7 @@
   "name": "dish-app",
   "version": "0.0.0",
   "description": "A simple dish application made with node and postgres as database",
-  "main": "app.js",
+  "main": "start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
