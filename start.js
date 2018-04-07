@@ -11,7 +11,7 @@ const app = express();
 
 //Database connection
 // const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
-const db = process.env.HEROKU_POSTGRESQL_DBNAME_URL
+const db = "process.env.DATABASE_URL?ssl=true"
 
 
 
