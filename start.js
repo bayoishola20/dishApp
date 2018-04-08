@@ -13,7 +13,7 @@ const app = express();
 // const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
 
 let pool = new pg.Pool({
-    connectionString: `process.env.DATABASE_URL`,
+    connectionString: process.env.DATABASE_URL,
     ssl: true,
 })
 
@@ -89,6 +89,7 @@ app.post('/edit', function(req, res){
     res.redirect('/');
    });
 });
+
 
 //Server
 app.set('port', (process.env.PORT || 3333));
