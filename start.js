@@ -13,7 +13,7 @@ const app = express();
 // const db = "postgres://bayoishola20:bayoishola20@localhost/dishApp";
 
 let pool = new pg.Pool({
-    connectionString: `process.env.DATABASE_URL?ssl=true`,
+    connectionString: `process.env.DATABASE_URL`,
     ssl: true,
 })
 
